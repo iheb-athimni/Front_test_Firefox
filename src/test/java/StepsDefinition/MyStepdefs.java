@@ -2,7 +2,6 @@ package StepsDefinition;
 
 import General.generalFunction;
 import Page.LoginPage;
-import Page.apitesting;
 import Runner.TestRunner;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
@@ -21,12 +20,11 @@ public class MyStepdefs extends generalFunction {
     private LoginPage loginPage;
 
     @Autowired
-    private apitesting apitesty;
 
-    @Given("^Open the \"([^\"]*)\" browser")
-    public void browserIsOpen(String myBrowser){
-        getTheDriver(myBrowser);
-        System.out.println("step 1 : the "+myBrowser+ " browser is open");
+    @Given("^Open the fireFox browser")
+    public void browserIsOpen(){
+        getTheDriver();
+        System.out.println("step 1 : the fireFox browser is open");
     }
 
     @And("^I open the Authentication Page$")
@@ -61,12 +59,4 @@ public class MyStepdefs extends generalFunction {
             System.out.println("step 6 : Closing the browser ");
         }
     }
-
-    @Given("check the API respence")
-    public void checkTheAPIRespence() throws IOException {
-        apitesty = new apitesting();
-        apitesty.testApiSecond();
-    }
-
-
 }
