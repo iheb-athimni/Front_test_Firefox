@@ -13,7 +13,7 @@ import java.io.IOException;
 import java.net.URISyntaxException;
 import java.util.Properties;
 
-public class generalFunction{
+public class generalFunction extends AbstractDriverOptions<FirefoxOptions>{
 
     private ThreadLocal<WebDriver> webDriver ;
     public static long PAGE_LOAD_TIMEOUT = 20;
