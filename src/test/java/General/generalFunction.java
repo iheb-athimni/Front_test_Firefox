@@ -67,7 +67,7 @@ public class generalFunction{
 	firefoxOptions.setProfile(profile);
         
 
-        driver = new FirefoxDriver();
+        driver = new FirefoxDriver(firefoxOptions);
         driver.manage().window().maximize();
         driver.manage().deleteAllCookies();
     }
