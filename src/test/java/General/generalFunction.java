@@ -60,7 +60,7 @@ public class generalFunction{
 
         System.setProperty("webdriver.gecko.driver","drivers/geckodriver.exe" );
 
-
+        FirefoxOptions options = new FirefoxOptions();
         firefoxOptions.addPreference("browser.popups.showPopupBlocker", false);
 	firefoxOptions.addPreference("security.sandbox.content.level", 5);
 	firefoxOptions.setAcceptInsecureCerts(true);
