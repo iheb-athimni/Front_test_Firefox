@@ -31,9 +31,7 @@ jobs:
       with:
         java-version: 1.8
     - name: Setup Firefox and GeckoDriver
-      uses: ./.github/workflows/firefoxSetup
+      run: firefox --version
     - name: Build with Maven
       run: mvn -B package --file pom.xml
 
-
-#   - name: Build with Maven
