@@ -19,7 +19,7 @@ on:
 
 jobs:
  build:
-  runs-on: ubuntu-latest
+  runs-on: windows-latest
 
   #   steps:
   steps:
@@ -32,10 +32,12 @@ jobs:
         java-version: 1.8
 
     - name: Setup Firefox
-      run: firefox --version
+      run:
+      chmod +x ./scriptInstal/fireFoxScript.sh
+          ./scriptInstal/fireFoxScript.sh
 
-    - name: Setup GeckoDriver
-      run: chmod +x ./drivers/geckodriver.exe
+#    - name: Setup GeckoDriver
+#      run: chmod +x ./drivers/geckodriver.exe
 
     - name: Build with Maven
       run: mvn -B package --file pom.xml
