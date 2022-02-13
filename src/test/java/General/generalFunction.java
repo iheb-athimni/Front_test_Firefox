@@ -63,10 +63,10 @@ public class generalFunction{
         options.addPreference("browser.popups.showPopupBlocker", false);
 	options.addPreference("security.sandbox.content.level", 5);
 	options.setAcceptInsecureCerts(true);
-	options.setProfile(profile);
+	//options.setProfile(profile);
         
 
-        driver = new FirefoxDriver(firefoxOptions);
+        driver = new FirefoxDriver(options);
         driver.manage().window().maximize();
         driver.manage().deleteAllCookies();
     }
