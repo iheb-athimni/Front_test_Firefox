@@ -30,8 +30,13 @@ jobs:
       uses: actions/setup-java@v1
       with:
         java-version: 1.8
-    - name: Setup Firefox and GeckoDriver
+
+    - name: Setup Firefox
       run: firefox --version
+
+    - name: Setup GeckoDriver
+      run: chmod +x ./drivers/geckodriver.exe
+
     - name: Build with Maven
       run: mvn -B package --file pom.xml
 
