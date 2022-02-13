@@ -61,10 +61,10 @@ public class generalFunction extends AbstractDriverOptions<FirefoxOptions>{
         System.setProperty("webdriver.gecko.driver","drivers/geckodriver.exe" );
 
         FirefoxOptions options = new FirefoxOptions();
-        firefoxOptions.addPreference("browser.popups.showPopupBlocker", false);
-	firefoxOptions.addPreference("security.sandbox.content.level", 5);
-	firefoxOptions.setAcceptInsecureCerts(true);
-	firefoxOptions.setProfile(profile);
+        options.addPreference("browser.popups.showPopupBlocker", false);
+	options.addPreference("security.sandbox.content.level", 5);
+	options.setAcceptInsecureCerts(true);
+	options.setProfile(profile);
         
 
         driver = new FirefoxDriver(firefoxOptions);
