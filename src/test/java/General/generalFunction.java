@@ -59,6 +59,14 @@ public class generalFunction{
     public static void getTheDriver(){
 
         System.setProperty("webdriver.gecko.driver","drivers/geckodriver.exe" );
+
+
+        firefoxOptions.addPreference("browser.popups.showPopupBlocker", false);
+	firefoxOptions.addPreference("security.sandbox.content.level", 5);
+	firefoxOptions.setAcceptInsecureCerts(true);
+	firefoxOptions.setProfile(profile);
+        
+
         driver = new FirefoxDriver();
         driver.manage().window().maximize();
         driver.manage().deleteAllCookies();
