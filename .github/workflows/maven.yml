@@ -12,7 +12,9 @@ on:
 
 
  pull_request:
-  branches: [ master ]
+  branches:
+   - main
+   - master
  schedule:
     # * is a special character in YAML so you have to quote that triggers the workflow every day at 5:30
     - cron:  '30 5 * * *'
@@ -31,7 +33,7 @@ jobs:
       with:
         java-version: 1.8
 
-    - name: Setup Firefox
+    - name: Setup Firefox browser
       run:   |
        chmod +x ./scriptInstal/fireFoxScript.sh
                 ./scriptInstal/fireFoxScript.sh
