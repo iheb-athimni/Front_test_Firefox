@@ -61,8 +61,8 @@ public class generalFunction{
 
         FirefoxOptions options = new FirefoxOptions();
         options.addPreference("browser.popups.showPopupBlocker", false);
-	options.addPreference("security.sandbox.content.level", 5);
-	options.setAcceptInsecureCerts(true);
+        options.addPreference("security.sandbox.content.level", 5);
+        options.setAcceptInsecureCerts(true);
 	//options.setProfile(profile);
         
 
